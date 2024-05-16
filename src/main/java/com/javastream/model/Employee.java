@@ -30,6 +30,7 @@ public class Employee {
     private double salary;
     private int age;
     private Date startDate;
+
     private boolean isActive;
     @PrePersist
     public void generateId() {
