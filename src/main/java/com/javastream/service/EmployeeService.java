@@ -1,17 +1,18 @@
 package com.javastream.service;
 
+import com.javastream.dto.EmployeeRequestDTO;
+import com.javastream.dto.EmployeeResponseDTO;
 import com.javastream.model.Employee;
 
 import java.util.List;
 
 public interface EmployeeService {
-    List<Employee> getFemaleEmployees();
-    List<Employee> getMaleEmployees();
-    List<Employee> getEmployeesByDepartment(String department);
-    List<Employee> getEmployeesByPosition(String position);
-    List<Employee> getEmployeesByNameStartingWith(String prefix);
-    List<Employee> getEmployeesByCity(String city);
-    List<Employee> getEmployeesByState(String state);
-    List<Employee> getActiveEmployees();
-    Employee addEmployee(Employee employee);
+    List<EmployeeResponseDTO> getEmployeesGender(String gender);
+    List<EmployeeResponseDTO> getEmployeesByDepartment(String department);
+    List<EmployeeResponseDTO> getEmployeesByPosition(String position);
+    List<EmployeeResponseDTO> getEmployeesByNameStartingWith(String prefix);
+    List<EmployeeResponseDTO> getEmployeesByCity(String city);
+    List<EmployeeResponseDTO> getEmployeesByState(String state);
+    List<EmployeeResponseDTO> getActiveEmployees();
+    EmployeeResponseDTO addEmployee(EmployeeRequestDTO employeeRequestDTO);
 }
