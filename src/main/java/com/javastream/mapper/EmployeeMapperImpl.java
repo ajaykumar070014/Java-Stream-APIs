@@ -1,5 +1,6 @@
 package com.javastream.mapper;
 
+import com.javastream.constants.GlobalConstants;
 import com.javastream.dto.EmployeeRequestDTO;
 import com.javastream.dto.EmployeeResponseDTO;
 import com.javastream.model.Employee;
@@ -21,7 +22,7 @@ public class EmployeeMapperImpl implements EmployeeMapper{
         employee.setAddress( dto.getAddress() );
         employee.setCity( dto.getCity() );
         employee.setState( dto.getState() );
-        employee.setCountry( dto.getCountry() );
+        employee.setCountry(GlobalConstants.COUNTRY);
         employee.setDepartment( dto.getDepartment() );
         employee.setPosition( dto.getPosition() );
         employee.setSalary( dto.getSalary() );
